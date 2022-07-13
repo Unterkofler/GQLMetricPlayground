@@ -1,7 +1,13 @@
 micronaut:
   application:
     name: GQLMetricPlayground
+  metrics:
+    enabled: true
 netty:
   default:
     allocator:
       max-order: 3
+
+graphql:
+  graphiql:
+    enabled: true
