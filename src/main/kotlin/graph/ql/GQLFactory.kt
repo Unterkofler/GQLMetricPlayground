@@ -1,3 +1,5 @@
+package graph.ql
+
 import com.expediagroup.graphql.generator.SchemaGenerator
 import com.expediagroup.graphql.generator.SchemaGeneratorConfig
 import com.expediagroup.graphql.generator.TopLevelObject
@@ -9,12 +11,13 @@ import jakarta.inject.Singleton
 @Factory
 class GQLFactory {
 
+
     @Singleton
-    fun graphQL(sampleQueries: SampleQueries): GraphQL {
+    suspend fun graphQL(sampleQueries: SampleQueries): GraphQL {
         val config = SchemaGeneratorConfig(
             supportedPackages = listOf(
                 "graph.ql",
-            ),
+            )
         )
 
         val queries = listOf(

@@ -1,4 +1,4 @@
 package graph.ql
 
-@Target(AnnotationTarget.CLASS, AnnotationTarget.VALUE_PARAMETER)
+@Target(AnnotationTarget.CLASS)
 annotation class GraphqlMetric()
