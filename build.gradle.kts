@@ -25,6 +25,7 @@ dependencies {
     runtimeOnly("ch.qos.logback:logback-classic")
     implementation("io.micronaut:micronaut-validation")
 
+    implementation("io.micronaut.micrometer:micronaut-micrometer-registry-prometheus")
     implementation("io.micronaut.graphql:micronaut-graphql")
     implementation("com.expediagroup:graphql-kotlin-schema-generator:5.5.0")
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")

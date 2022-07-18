@@ -1,6 +1,7 @@
-package graph.ql.tes
+package graph.ql
 
-import java.lang.reflect.Method
+import graph.ql.tes.CountMethodes
+import jakarta.inject.Singleton
 
 @CountMethodes
 class Person(private val firstName: String, private val  lastName: String, private val age: Int, private val city: String) {

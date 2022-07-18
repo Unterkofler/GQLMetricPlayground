@@ -1,5 +1,4 @@
-import graph.ql.tes.Person
-import java.lang.reflect.Method
+import graph.ql.Person
 
 fun main(args: Array<String>){
     val achim: Person = Person("Achim", "Untderkofler", 22, "Dornbirn")

@@ -1,8 +1,14 @@
 micronaut:
   application:
-    name: GQLMetricPlayground
+    name: GraphQLPlaygraound
   metrics:
     enabled: true
+    export:
+      prometheus:
+        enabled: true
+        descriptions: true
+        step: PT1M
+
 netty:
   default:
     allocator:
@@ -11,3 +17,7 @@ netty:
 graphql:
   graphiql:
     enabled: true
+
+endpoints:
+  prometheus:
+    sensitive: false
