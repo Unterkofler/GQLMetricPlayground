@@ -1,13 +1,12 @@
-package graph.ql
+package graph.ql.tes
 
-import graph.ql.tes.CountMethodes
-import jakarta.inject.Singleton
-
-@CountMethodes
+@CountMethodes(typeOfClass = Person::class)
+//@CountMethodes(typeOfClass = Person::class, methodesOfClass = Person::nameMethodOfClass)
 class Person(private val firstName: String, private val  lastName: String, private val age: Int, private val city: String) {
 
     fun speek(){
         println("${firstName} blablabla")
+
     }
 
     fun screem(){

@@ -1,11 +1,14 @@
 package graph.ql.tes
 
-import graph.ql.Person
+import io.micronaut.core.annotation.ReflectionConfig
+import kotlin.reflect.KClass
+import kotlin.reflect.KFunction1
 
 @Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.RUNTIME)
-annotation class CountMethodes()
+annotation class CountMethodes(val typeOfClass: KClass<*>) {
 
-fun getClass(person: Person) {
+   // annotation class CountMethodes(val typeOfClass: KClass<*>, val methodesOfClass: KFunction1<ArrayList<String>>) {
 
-}
+
+    }

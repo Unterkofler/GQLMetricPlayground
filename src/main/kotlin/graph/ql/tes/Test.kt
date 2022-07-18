@@ -1,12 +1,10 @@
-import graph.ql.Person
+package graph.ql.tes
 
 fun main(args: Array<String>){
     val achim: Person = Person("Achim", "Untderkofler", 22, "Dornbirn")
-    val name = object{}.javaClass.enclosingMethod.name
     val achimJavaClass = achim.javaClass.declaredMethods
-    achimJavaClass
 
-    val  test = achimJavaClass.filter { it -> it.name != null}.forEach({ println(it.name)})
+    val x = achim.javaClass.getAnnotation(CountMethodes::class.java).toString()
 
     println("Person: $achim")
     achim.laught()
@@ -15,6 +13,7 @@ fun main(args: Array<String>){
     println(achim.countMethod())
 
     val methodNamesOfPerson = achim.nameMethodOfClass()
+
 
     println()
 }
