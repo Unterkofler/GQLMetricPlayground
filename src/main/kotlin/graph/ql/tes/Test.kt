@@ -12,6 +12,8 @@ fun main(args: Array<String>){
     achim.screem()
     println(achim.countMethod())
 
+    val xy = Person::class.java.declaredMethods.toList()
+
     val methodNamesOfPerson = achim.nameMethodOfClass()
 
 

@@ -1,35 +1,41 @@
 package graph.ql.tes
 
+import kotlin.reflect.full.functions
+
 @CountMethodes(typeOfClass = Person::class)
 //@CountMethodes(typeOfClass = Person::class, methodesOfClass = Person::nameMethodOfClass)
-class Person(private val firstName: String, private val  lastName: String, private val age: Int, private val city: String) {
+open class Person(private val firstName: String, private val  lastName: String, private val age: Int, private val city: String) {
 
-    fun speek(){
+    open fun speek(){
         println("${firstName} blablabla")
 
     }
 
-    fun screem(){
+    open fun screem(){
         println("ahhhhhhhh")
     }
 
-    fun laught(){
+    open fun laught(){
         println("ahahahahaha")
     }
 
-    fun countMethod(): Int?{
+    open fun countMethod(): Int?{
         val count = javaClass.declaredMethods.size
         return count
     }
 
-    fun nameMethodOfClass(): ArrayList<String> {
+    open fun nameMethodOfClass(): ArrayList<String> {
         val names = javaClass.declaredMethods
         var namesOfMethodes: ArrayList<String> = ArrayList()
+        var diaNamen: String = String()
         for (name in names){
             val result = name.name
+            diaNamen += name.name + ' '
             namesOfMethodes.add(result)
             println("Methoden sind: $result")
         }
+
+
         return namesOfMethodes
     }
 }
