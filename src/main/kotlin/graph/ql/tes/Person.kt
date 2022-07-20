@@ -1,10 +1,24 @@
 package graph.ql.tes
 
-import kotlin.reflect.full.functions
-
 @CountMethodes(typeOfClass = Person::class)
-//@CountMethodes(typeOfClass = Person::class, methodesOfClass = Person::nameMethodOfClass)
-open class Person(private val firstName: String, private val  lastName: String, private val age: Int, private val city: String) {
+open class Person(private val firstName: String, private val  lastName: String, private val age: Int, private val city: String, private val color: Color) {
+
+    open fun getName(): String{
+        return firstName
+    }
+    open fun getAge(): Int{
+        return age
+    }
+    open fun getColor(): Color{
+        return color
+    }
+    open fun getCity(): String{
+        return city
+    }
+    open fun getLastName(): String{
+        return lastName
+    }
+
 
     open fun speek(){
         println("${firstName} blablabla")
@@ -37,5 +51,8 @@ open class Person(private val firstName: String, private val  lastName: String, 
 
 
         return namesOfMethodes
+    }
+    override fun toString(): String {
+        return "{firstName: $firstName, lastName: $lastName, age: $age, city: $city}"
     }
 }
