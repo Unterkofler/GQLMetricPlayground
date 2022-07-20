@@ -11,8 +11,4 @@ class SampleMutation {
         repository.createReservation(reservation)
         return "OK"
     }
-//    fun createString(aString: String):String{
-//        testRepoForString.creatString(aString)
-//        return "OK"
-//    }
 }
