@@ -1,8 +1,6 @@
 package graph.ql
 
-import jakarta.inject.Singleton
-import java.time.LocalDate
-import java.util.Date
+import java.util.UUID
 
 
 class Reservation(val reservationName: String, val id: Int, val from: String, val to: String) {

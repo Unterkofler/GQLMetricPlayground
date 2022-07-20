@@ -4,7 +4,7 @@ import jakarta.inject.Singleton
 
 @Singleton
 class SampleQueries {
-    val repo: Repository = Repository()
+    var repo: Repository = Repository()
 
     fun getAllReservations(): List<Reservation> {
         return repo.getAllReservation()

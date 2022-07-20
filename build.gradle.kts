@@ -29,6 +29,7 @@ dependencies {
     implementation("io.micronaut.graphql:micronaut-graphql")
     implementation("com.expediagroup:graphql-kotlin-schema-generator:5.5.0")
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
+    implementation("com.graphql-java:graphql-java-extended-scalars:17.0")
 
 }
 
