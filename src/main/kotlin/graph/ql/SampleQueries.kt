@@ -1,5 +1,6 @@
 package graph.ql
 
+import com.expediagroup.graphql.generator.exceptions.EmptyMutationTypeException.message
 import jakarta.inject.Singleton
 
 @Singleton
@@ -8,6 +9,7 @@ class SampleQueries {
     var repoStr: TestRepoForString = TestRepoForString()
 
     fun getAllReservations(): List<Reservation> {
+        val repository =
         return repo.getAllReservation()
     }
 
@@ -15,7 +17,8 @@ class SampleQueries {
         return repo.getReservationById(id)
     }
 
-//    fun createString(aString: String) {
-//        repoStr.creatString(aString)
-//    }
+    fun createString(aString: String): Boolean{
+        repoStr.creatString(aString)
+        return true
+    }
 }

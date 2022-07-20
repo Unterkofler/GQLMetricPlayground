@@ -11,7 +11,7 @@ import jakarta.inject.Singleton
 class GQLFactory {
 
     @Singleton
-    fun graphQL(sampleQueries: SampleQueries): GraphQL {
+    fun graphQL(sampleQueries: SampleQueries, sampleMutation: SampleMutation): GraphQL {
         val config = SchemaGeneratorConfig(
             supportedPackages = listOf(
                 "graph.ql",
@@ -22,8 +22,12 @@ class GQLFactory {
             sampleQueries,
         ).map { TopLevelObject(it) }
 
+        val mutation = listOf(
+            sampleMutation,
+        ).map { TopLevelObject(it) }
+
         val generator = SchemaGenerator(config)
-        val schema = generator.use { it.generateSchema(queries) }
+        val schema = generator.use { it.generateSchema(queries, mutation) }
 
         return GraphQL.newGraphQL(schema).build()
     }

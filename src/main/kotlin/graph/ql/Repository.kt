@@ -1,5 +1,8 @@
 package graph.ql
 
+import jakarta.inject.Singleton
+
+@Singleton
 class Repository {
         val db = mutableListOf<Reservation>(Reservation("achim", 1, "2022-08-02", "2022-09-01"),
             Reservation("achim", 2,"2023-08-02", "2023-09-01"),
