@@ -18,4 +18,8 @@ class Repository {
     fun getReservationById(id: Int): List<Reservation> {
         return db.filter { it.id == id }
     }
+
+    fun createReservation(reservation: Reservation){
+        db.add(reservation)
+    }
 }

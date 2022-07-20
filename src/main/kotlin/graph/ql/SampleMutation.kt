@@ -4,9 +4,15 @@ import jakarta.inject.Singleton
 
 @Singleton
 class SampleMutation {
-    var testRepoForString: TestRepoForString = TestRepoForString()
-    fun createString(aString: String):String{
-        testRepoForString.creatString(aString)
+    var repository: Repository = Repository()
+
+    fun createReservation(reservationName: String, id: Int,from: String, to: String ): String{
+        val reservation: Reservation = Reservation(reservationName, id, from, to)
+        repository.createReservation(reservation)
         return "OK"
     }
+//    fun createString(aString: String):String{
+//        testRepoForString.creatString(aString)
+//        return "OK"
+//    }
 }
