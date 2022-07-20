@@ -51,6 +51,11 @@ fun main(args: Array<String>){
     val filteredIdx = numbers.filterIndexed { index, s -> (index != 0) && (s.length < 5)  }
     val filteredNot = numbers.filterNot { it.length <= 3 }
 
+    var stringList = mutableListOf<String>()
+    stringList.add("aaaa")
+    stringList.add("bbbb")
+    stringList.add("uuuu")
+
 
     println()
     println("associateBy function on a list")

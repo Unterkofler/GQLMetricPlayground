@@ -1,7 +1,7 @@
 package graph.ql
 
 class Repository {
-        val db = listOf(Reservation("achim", 1, "2022-08-02", "2022-09-01"),
+        val db = mutableListOf<Reservation>(Reservation("achim", 1, "2022-08-02", "2022-09-01"),
             Reservation("achim", 2,"2023-08-02", "2023-09-01"),
             Reservation("achim", 3, "2023-07-02", "2023-08-01"),
             Reservation("achim", 4, "2023-06-02", "2023-07-01"),
