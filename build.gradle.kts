@@ -31,6 +31,12 @@ dependencies {
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("com.graphql-java:graphql-java-extended-scalars:17.0")
 
+    kaptTest("io.micronaut:micronaut-inject-java")
+    testImplementation("io.micronaut.test:micronaut-test-junit5")
+    testImplementation("io.mockk:mockk")
+    testImplementation("io.micronaut.test:micronaut-test-kotest5")
+    testRuntimeOnly("io.kotest:kotest-runner-junit5-jvm")
+
 }
 
 

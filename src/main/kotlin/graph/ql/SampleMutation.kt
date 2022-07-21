@@ -10,4 +10,8 @@ class SampleMutation(private val repository: Repository) {
         repository.createReservation(reservation)
         return "OK"
     }
+
+    fun test(aString: String):String{
+        return "astring"
+    }
 }
