@@ -1,5 +1,6 @@
 package graph.ql
 
+import graphql.scalars.ExtendedScalars
 import java.util.UUID
 
 

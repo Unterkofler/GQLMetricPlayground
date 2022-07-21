@@ -20,6 +20,7 @@ class GQLFactory {
             supportedPackages = listOf(
                 "graph.ql",
             ),
+            hooks = CustomSchemaGeneratorHooks()
         )
 
         val queries = listOf(

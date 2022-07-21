@@ -1,3 +1,5 @@
+import java.util.regex.Pattern.compile
+
 plugins {
     id("org.jetbrains.kotlin.jvm") version "1.6.21"
     id("org.jetbrains.kotlin.kapt") version "1.6.21"
@@ -36,6 +38,8 @@ dependencies {
     testImplementation("io.mockk:mockk")
     testImplementation("io.micronaut.test:micronaut-test-kotest5")
     testRuntimeOnly("io.kotest:kotest-runner-junit5-jvm")
+
+    compile("com.graphql-java:graphql-java-extended-scalars:18.1")
 
 }
 
