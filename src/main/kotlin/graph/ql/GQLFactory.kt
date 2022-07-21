@@ -8,6 +8,7 @@ import graphql.GraphQL
 import graphql.execution.SubscriptionExecutionStrategy
 import io.micronaut.context.annotation.Factory
 import jakarta.inject.Singleton
+import kotlin.reflect.KClass
 
 @Factory
 class GQLFactory {

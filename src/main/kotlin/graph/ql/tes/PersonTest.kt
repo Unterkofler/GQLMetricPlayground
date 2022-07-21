@@ -2,7 +2,7 @@ package graph.ql.tes
 
 class PersonTest(_name: String, _lastName: String, _age: Int, _city: String) {
     val name: String
-    val lastName: String
+    private val lastName: String
     val age: Int
     val city: String
 
