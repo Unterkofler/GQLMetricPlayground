@@ -8,7 +8,7 @@ import io.micronaut.context.annotation.Factory
 import jakarta.inject.Singleton
 
 @Factory
-class GQLFactory {
+class GQLFactory() {
 
     @Singleton
     fun graphQL(sampleQueries: SampleQueries, sampleMutation: SampleMutation): GraphQL {

@@ -4,15 +4,13 @@ import com.expediagroup.graphql.generator.exceptions.EmptyMutationTypeException.
 import jakarta.inject.Singleton
 
 @Singleton
-class SampleQueries {
-    var repo: Repository = Repository()
+class SampleQueries(private val repository: Repository) {
 
     fun getAllReservations(): List<Reservation> {
-        val repository =
-        return repo.getAllReservation()
+        return repository.getAllReservation()
     }
 
     fun getReservationById(id: Int): List<Reservation> {
-        return repo.getReservationById(id)
+        return repository.getReservationById(id)
     }
 }
