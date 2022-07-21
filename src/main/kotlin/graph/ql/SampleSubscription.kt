@@ -7,7 +7,7 @@ import org.reactivestreams.Publisher
 @Singleton
 class SampleSubscription {
 
-    fun subscription(aString: String): Publisher<String>{
+    fun subscription(): Publisher<String>{
         return CustomerPublischer()
     }
 
