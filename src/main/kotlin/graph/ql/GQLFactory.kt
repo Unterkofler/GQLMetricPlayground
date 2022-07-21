@@ -5,6 +5,7 @@ import com.expediagroup.graphql.generator.SchemaGeneratorConfig
 import com.expediagroup.graphql.generator.TopLevelObject
 import com.expediagroup.graphql.generator.hooks.SchemaGeneratorHooks
 import graphql.GraphQL
+import graphql.execution.ExecutionStrategy
 import graphql.execution.SubscriptionExecutionStrategy
 import io.micronaut.context.annotation.Factory
 import jakarta.inject.Singleton
@@ -19,7 +20,6 @@ class GQLFactory {
             supportedPackages = listOf(
                 "graph.ql",
             ),
-            hooks = CustomerSchemaGeneratorHooks()
         )
 
         val queries = listOf(
