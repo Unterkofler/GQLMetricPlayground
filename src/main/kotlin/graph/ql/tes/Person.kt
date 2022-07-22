@@ -1,6 +1,6 @@
 package graph.ql.tes
 
-@CountMethodes(typeOfClass = Person::class)
+
 open class Person(private val firstName: String, private val  lastName: String, private val age: Int, private val city: String, private val color: Color) {
 
     open fun getName(): String{

@@ -1,5 +1,9 @@
 package graph.ql.tes
 
+import java.util.concurrent.Flow
+import kotlinx.coroutines.*
+import kotlinx.coroutines.flow.*
+
 fun main(args: Array<String>){
     val bob: Person = Person("bob","zoller", 33, "Wien", Color.RED)
     val stefan: Person = Person("stefan","zoller", 83, "Wien", Color.BLUE)
@@ -89,11 +93,8 @@ fun main(args: Array<String>){
         Color.RED -> println("Red")
     }
 
-
-
-
-
-
+    //Testing the class Flow
+    val flow = flowOf("first", "second", "third")
 
 //    println(filteredIdx)
 //    println(filteredNot)

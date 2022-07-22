@@ -3,6 +3,8 @@ package graph.ql
 import com.expediagroup.graphql.generator.SchemaGenerator
 import com.expediagroup.graphql.generator.SchemaGeneratorConfig
 import com.expediagroup.graphql.generator.TopLevelObject
+import com.expediagroup.graphql.generator.execution.FlowSubscriptionExecutionStrategy
+import com.expediagroup.graphql.generator.hooks.FlowSubscriptionSchemaGeneratorHooks
 import com.expediagroup.graphql.generator.hooks.SchemaGeneratorHooks
 import graphql.GraphQL
 import graphql.execution.ExecutionStrategy
@@ -20,7 +22,7 @@ class GQLFactory {
             supportedPackages = listOf(
                 "graph.ql",
             ),
-            hooks = CustomSchemaGeneratorHooks()
+            hooks = FlowSubscriptionSchemaGeneratorHooks()
         )
 
         val queries = listOf(
@@ -38,6 +40,5 @@ class GQLFactory {
         val generator = SchemaGenerator(config)
         val schema = generator.use { it.generateSchema(queries, mutation, subscription) }
 
-        return GraphQL.newGraphQL(schema).build()
-    }
+        return GraphQL.newGraphQL(schema).subscriptionExecutionStrategy(FlowSubscriptionExecutionStrategy()).build() }
 }
