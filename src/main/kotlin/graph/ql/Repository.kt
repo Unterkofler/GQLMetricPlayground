@@ -15,8 +15,11 @@ class Repository {
         return db.filter { it.id.javaClass == Int::class.java }
     }
 
-    fun getReservationById(id: Int): List<Reservation> {
-        return db.filter { it.id == id }
+    fun getReservationById(id: Int): Reservation? {
+        if (db.filter { it.id == id }.isEmpty()){
+            return null
+        }
+        return db.filter { it.id == id }[0]
     }
 
     fun createReservation(reservation: Reservation){

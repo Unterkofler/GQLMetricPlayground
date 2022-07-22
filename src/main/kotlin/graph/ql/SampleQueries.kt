@@ -10,7 +10,7 @@ class SampleQueries(private val repository: Repository) {
         return repository.getAllReservation()
     }
 
-    fun getReservationById(id: Int): List<Reservation> {
+    fun getReservationById(id: Int): Reservation? {
         return repository.getReservationById(id)
     }
 }
