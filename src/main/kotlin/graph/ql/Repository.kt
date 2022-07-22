@@ -16,10 +16,12 @@ class Repository {
     }
 
     fun getReservationById(id: Int): Reservation? {
-        if (db.filter { it.id == id }.isEmpty()){
-            return null
+        try {
+            return db.filter { it.id == id }[0]
+        }catch (e: Exception){
+            println(e)
         }
-        return db.filter { it.id == id }[0]
+        return null
     }
 
     fun createReservation(reservation: Reservation){
