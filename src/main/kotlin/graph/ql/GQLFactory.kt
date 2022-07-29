@@ -40,5 +40,5 @@ class GQLFactory {
         val generator = SchemaGenerator(config)
         val schema = generator.use { it.generateSchema(queries, mutation, subscription) }
 
-        return GraphQL.newGraphQL(schema).subscriptionExecutionStrategy(FlowSubscriptionExecutionStrategy()).build() }
+        return GraphQL.newGraphQL(schema).build() }
 }

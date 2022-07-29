@@ -4,14 +4,9 @@ import jakarta.inject.Singleton
 
 @Singleton
 class SampleMutation(private val repository: Repository) {
-
-    fun createReservation(reservationName: String,from: String, to: String ): String{
-        val reservation: Reservation = Reservation(reservationName, repository.db.size + 1, from, to)
-        repository.createReservation(reservation)
+    fun createReservation(reservationName: String, from: String, to: String, comment: String ): String{
+        repository.createReservation(Reservation(reservationName,repository.db.size +1, from,to, comment))
         return "OK"
     }
 
-    fun test(aString: String):String{
-        return "astring"
-    }
 }

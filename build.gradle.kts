@@ -16,6 +16,7 @@ repositories {
     mavenCentral()
 }
 
+
 dependencies {
     kapt("io.micronaut:micronaut-http-validation")
     implementation("io.micronaut:micronaut-http-client")
@@ -32,6 +33,9 @@ dependencies {
     implementation("com.expediagroup:graphql-kotlin-schema-generator:5.5.0")
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("com.graphql-java:graphql-java-extended-scalars:17.0")
+
+    // https://mavenlibs.com/maven/dependency/org.webjars.npm/graphql-subscriptions
+    implementation("org.webjars.npm:graphql-subscriptions:0.4.4")
 
     kaptTest("io.micronaut:micronaut-inject-java")
     testImplementation("io.micronaut.test:micronaut-test-junit5")

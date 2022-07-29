@@ -1,12 +1,16 @@
 package graph.ql
 
 import jakarta.inject.Singleton
-import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.*
 
 
 @Singleton
-class SampleSubscription(repository: Repository) {
-    fun subscription(topic: String): kotlinx.coroutines.flow.Flow<String> {
-        return flowOf("first", "second", "third")
+class SampleSubscription(private val repository: Repository) {
+    fun subscription(topic: String) = flow {
+        repeat(10){
+            delay(1000)
+            emit(it)
+        }
     }
 }

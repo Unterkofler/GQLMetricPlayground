@@ -17,6 +17,11 @@ netty:
 graphql:
   graphiql:
     enabled: true
+  graphql-ws:
+    enabled: true
+    path: /graphql-ws
+    keep-alive-enabled: true
+    keep-alive-interval: 15s
 
 endpoints:
   prometheus:

@@ -4,7 +4,7 @@ import graphql.scalars.ExtendedScalars
 import java.util.UUID
 
 
-class Reservation(val reservationName: String, val id: Int, val from: String, val to: String) {
+class Reservation(val reservationName: String, val id: Int, val from: String, val to: String, val comment: String) {
     fun getName(): String{
         return reservationName
     }
